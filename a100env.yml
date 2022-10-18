@@ -1,0 +1,17 @@
+name: clear-diffusion
+channels:
+  - default
+  - conda-forge
+dependencies:
+  - python=3.8
+  - cudatoolkit=11.2
+  - cudnn=8.1.0
+  - pip
+  - pip:
+    - tensorflow==2.9.0
+    - matplotlib
+    - scipy
+    - tensorflow_datasets
+    - tensorflow_addons
+    - protobuf==3.13.0
+    - opencv-python
