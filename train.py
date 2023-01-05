@@ -50,8 +50,9 @@ end_log_snr = -7.5
 noise_embedding_max_frequency = 200.0
 noise_embedding_dims = 32
 image_embedding_dims = 64
-widths = [32, 64, 96, 128]
 block_depth = 2
+widths = [32, 64, 96, 128]
+attentions = [False, False, False, False]
 
 id = 0
 
@@ -72,8 +73,9 @@ model = DiffusionModel(
         noise_embedding_max_frequency=noise_embedding_max_frequency,
         noise_embedding_dims=noise_embedding_dims,
         image_embedding_dims=image_embedding_dims,
-        widths=widths,
         block_depth=block_depth,
+        widths=widths,
+        attentions=attentions,
     ),
     prediction_type=prediction_type,
     loss_type=loss_type,
@@ -95,7 +97,7 @@ model.compile(
 
 # checkpointing
 checkpoint_path = "checkpoints/model_{}".format(id)
-checkpoint_callback = tf.keras.callbacks.ModelCheckpoint(
+checkpoint_callback = keras.callbacks.ModelCheckpoint(
     filepath=checkpoint_path,
     save_weights_only=True,
     monitor="val_kid",
