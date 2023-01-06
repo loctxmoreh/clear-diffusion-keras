@@ -1,5 +1,5 @@
 # [Moreh] Running clear-diffusion-keras on Moreh AI Framework
-![](https://badgen.net/badge/Nvidia-A100/passed/green)
+![](https://badgen.net/badge/Nvidia-A100/passed/green) ![](https://badgen.net/badge/Moreh-HAC/failed/red)
 
 ## Prepare
 
@@ -20,6 +20,13 @@ On A100 machine, use `a100env.yml` file to create a conda environment:
 ```bash
 conda env create -f a100env.yml
 conda activate clear-diffusion
+```
+
+On HAC machine, use `hacenv.yml` file to create a conda environment:
+```bash
+conda env create -f hacenv.yml
+conda activate clear-diffusion
+update-moreh --force --tensorflow
 ```
 
 ## Run

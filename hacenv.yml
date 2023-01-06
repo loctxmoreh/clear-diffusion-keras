@@ -1,0 +1,12 @@
+name: clear-diffusion
+dependencies:
+  - python=3.8
+  - pip
+  - pip:
+    - tensorflow==2.9.0
+    - matplotlib
+    - scipy
+    - tensorflow_datasets
+    - tensorflow_addons
+    - protobuf==3.13.0
+    - opencv-python
