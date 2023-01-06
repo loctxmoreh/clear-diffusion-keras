@@ -40,3 +40,8 @@ Then, on A100 machine, run the training script:
 ```bash
 ./a100-train
 ```
+
+On HAC machine, simply run:
+```bash
+python3 train.py
+```
